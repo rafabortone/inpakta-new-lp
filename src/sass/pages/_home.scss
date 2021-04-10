@@ -1,0 +1,56 @@
+.home {
+
+  &__banner {
+    
+  }
+
+  &__contato {
+    background-color: $c-pink-jussi;
+    color: $c-white;
+    padding: 136px 0;
+    text-align: center;
+
+    .container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    h2 {
+      font: {
+        size: 32px;
+        weight: 700;
+      }
+      line-height: 40px;
+      text-transform: uppercase;
+      max-width: 676px;
+      margin-bottom: 32px;
+    }
+    span{
+      margin-bottom: 8px;
+    }
+    p {
+      font: {
+        size: 32px;
+        weight: 500;
+      }
+      line-height: 24px;
+    }
+  }
+
+  &__about {
+    display: flex;
+    flex-direction: column;
+
+    @media screen and (min-width: 769px) {
+      flex-direction: row;
+    }
+    .container{
+      width: 100%;
+      margin: 0 auto;
+      padding: 64px 16px;
+      @media screen and (min-width: 769px) {
+        width: unset;
+      }
+    }
+  }
+}

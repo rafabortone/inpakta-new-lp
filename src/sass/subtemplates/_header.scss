@@ -1,0 +1,177 @@
+.header {
+  width: 100%;
+  height: auto;
+  background-color: $c-white;
+  padding: 20px 24px;
+  font-weight: 500;
+
+  &__logo {
+    @media screen and (min-width: 769px) {
+      order: 1;
+    }
+    order: 1;
+  }
+
+  &__menu {
+    order: 2;
+    width: 50%;
+
+    @media screen and (min-width: 769px) {
+      order: 2;
+    }
+
+    &--list {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-top: 10px;
+      @media screen and(min-width: 446px) {
+        margin-top: 0;
+        justify-content: unset;
+      }
+    }
+
+    &--item {
+      margin-left: 0;
+
+      @media screen and(min-width: 446px) {
+        margin-left: 32px;
+      }
+      a {
+        cursor: pointer;
+
+        font: {
+          size: 14px;
+          weight: 500;
+        }
+
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+
+  &__search {
+    order: 4;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    position: relative;
+    padding-top: 20px;
+    @media screen and (min-width: 769px) {
+      order: 3;
+      width: 50%;
+      padding-top: 0;
+    }
+      
+    &--input {
+      width: 100%;
+      border: {
+        color: $c-gray;
+        radius: 50px;
+        style: solid;
+        width: 1px;
+      }
+  
+      @media screen and (min-width: 769px) {
+        width: 200px;
+      }
+      font: {
+        size: 16px;
+      }
+      padding: 8px 16px;
+
+      &::-webkit-input-placeholder {
+        color: $c-pink-jussi;
+      }
+  
+      &:-moz-placeholder {
+        /* Firefox 18- */
+        color: $c-pink-jussi;
+      }
+  
+      &::-moz-placeholder {
+        /* Firefox 19+ */
+        color: $c-pink-jussi;
+      }
+  
+      &:-ms-input-placeholder {
+        color: $c-pink-jussi;
+      }
+  
+      &:focus{
+        width: 100%;
+      }
+    }
+
+    &--icon {
+      order: 3;
+      position: absolute;
+      right: 12px;
+      @media screen and (min-width: 769px) {
+        order: 4;
+      }
+    }
+
+    &--list {
+      position: absolute;
+      left: 10px;
+      top: 110%;
+      display: none;
+      flex-wrap: wrap;
+      background-color: $c-white;
+      padding: 16px;
+      width: 100%;
+      z-index: 10;
+      box-shadow: -16px 23px 18px 2px rgba(0,0,0,0.3);
+      max-height:400px;
+      overflow: auto;
+    }
+    .active {
+      display: flex;
+    }
+    &--item {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      background-color: $c-white;
+      margin-right: 10px;
+      margin-bottom: 5px;
+      padding: 5px;
+      border: {
+        style: solid;
+        color: $c-gray;
+        width: 1px;
+        radius: 6px;
+      }
+      box-shadow: -3px 3px 9px 1px rgba(0,0,0,0.1);
+    }
+  }
+
+  &__login {
+    order: 3;
+    display: flex;
+    justify-content: flex-end;
+    width: 50%;
+    span {
+      margin-right: 20px;
+    }
+    @media screen and (min-width: 445px) {
+      width: auto;
+    }
+    @media screen and (min-width: 769px) {
+      order: 4;
+    }
+  }
+  .container {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    @media screen and (min-width: 769px) {
+      flex-wrap: nowrap;
+    }
+  }
+}
