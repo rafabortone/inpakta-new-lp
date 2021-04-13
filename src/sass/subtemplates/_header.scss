@@ -5,20 +5,15 @@
   padding: 20px 24px;
   font-weight: 500;
 
+  
   &__logo {
-    @media screen and (min-width: 769px) {
-      order: 1;
+
+    img {
+      max-width: 200px;
     }
-    order: 1;
   }
 
   &__menu {
-    order: 2;
-    width: 50%;
-
-    @media screen and (min-width: 769px) {
-      order: 2;
-    }
 
     &--list {
       display: flex;
@@ -53,7 +48,7 @@
   }
 
   &__search {
-    order: 4;
+ 
     width: 100%;
     display: flex;
     justify-content: flex-end;
@@ -61,7 +56,6 @@
     position: relative;
     padding-top: 20px;
     @media screen and (min-width: 769px) {
-      order: 3;
       width: 50%;
       padding-top: 0;
     }
@@ -107,11 +101,11 @@
     }
 
     &--icon {
-      order: 3;
+  
       position: absolute;
       right: 12px;
       @media screen and (min-width: 769px) {
-        order: 4;
+
       }
     }
 

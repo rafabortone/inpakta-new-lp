@@ -1,8 +1,8 @@
 import { Component } from 'react';
 import NewsLetter from '../components/NewsLetter'
-
+import BannerPrincipal from '../images/montagem-telas.png'
 import Vitrine from '../subtemplates/Vitrine'
-
+import AnchorLink from 'react-anchor-link-smooth-scroll'
 class Home extends Component {
 
   state = {
@@ -33,7 +33,20 @@ class Home extends Component {
       <div className="home">
         <section className="home__banner">
           <div className="container">
-        
+            <div className="home__banner--wrapper">
+              <div class="home__banner--image">
+                <img src={BannerPrincipal}/>
+              </div>
+              <div class="home__banner--text">
+                <h1>Facilitamos sua adequação com a LGPD ;)</h1>
+                <h5>Configure e atenda as exigências da LGPD em minutos. E o melhor, inicie gratuitamente!</h5>
+              </div>
+            </div>
+            <div className="home__banner--content">
+              
+              <AnchorLink href='#solucoes'>Começe agora gratuitamente!</AnchorLink>
+          
+            </div>
           </div>
         </section>
         <Vitrine

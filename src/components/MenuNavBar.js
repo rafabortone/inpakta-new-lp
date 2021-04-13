@@ -10,7 +10,7 @@ function MenuNavBar () {
         </li>
         <li className="header__menu--item">
           <a >
-          <AnchorLink href='#about'>Conheça a Jüssi</AnchorLink>
+          <AnchorLink href='#about'>Conheça a InPakta</AnchorLink>
           </a>
         </li>
       </ul>

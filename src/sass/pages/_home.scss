@@ -1,8 +1,90 @@
 .home {
 
+
   &__banner {
-    
+    min-height: 100vh;
+    background-image: url("data:image/svg+xml,%3Csvg width='1439' height='902' viewBox='0 0 1439 902' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath opacity='0.19' d='M0 55H1439V828.5C1439 828.5 1185 891.089 703 765.727C221 640.366 0 932.5 0 932.5V55Z' fill='url(%23paint0_linear)'/%3E%3Cpath d='M0 -3H1439V746.421C1439 746.421 1180.5 871.877 698.5 746.421C216.5 620.964 0 758 0 758V-3Z' fill='url(%23paint1_linear)'/%3E%3Cdefs%3E%3ClinearGradient id='paint0_linear' x1='25' y1='932.5' x2='538.143' y2='-71.451' gradientUnits='userSpaceOnUse'%3E%3Cstop stop-color='%2312C9FD'/%3E%3Cstop offset='1' stop-color='%231A60E8'/%3E%3C/linearGradient%3E%3ClinearGradient id='paint1_linear' x1='25' y1='802.179' x2='471.667' y2='-150.206' gradientUnits='userSpaceOnUse'%3E%3Cstop stop-color='%2312C9FD'/%3E%3Cstop offset='1' stop-color='%231A60E8'/%3E%3C/linearGradient%3E%3C/defs%3E%3C/svg%3E%0A");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 0 100%;
+
+    &--wrapper {
+      padding: 40px 0;
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+
+      @media screen and (min-width: 769px) {
+        padding: 80px 0;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+      }
+    }
+
+    &--image {
+      order: 2;
+      width: 100%;
+      img {
+        width: 100%;
+      }
+  
+    }
+
+    &--text {
+      order: 1;
+      color: $c-white;
+      width:100%;
+      @media screen and (min-width: 769px) {
+        order: 2;
+        max-width: 490px;
+        padding-left: 50px;
+      }
+
+      h1 {
+        font: {
+          size: 40px;
+        };
+        @media screen and (min-width: 769px) { 
+          font: {
+            size: 62px;
+            weight: 700;
+          }
+          line-height: 70px;
+          margin-bottom: 30px;
+        }
+      }
+      h5 {
+        font: {
+          size: 16px;
+          weight: 500;
+        };
+        @media screen and (min-width: 769px) { 
+          font: {
+            size: 24px;
+            weight: 500;
+          }
+          line-height: 28px;
+        }
+      }
+    }
+
+    &--content {
+      display: flex;
+      justify-content: center;
+      width: 100%;
+      a {
+        background: linear-gradient(39.97deg, #12C9FD 0.79%, #1A60E8 79.29%);
+        color: $c-white;
+        width: 100%;
+        text-align: center;
+        max-width: 320px;
+        padding: 20px;
+        border-radius: 50px;
+      }
+    }
   }
+  
 
   &__contato {
     background-color: $c-pink-jussi;
