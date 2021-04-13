@@ -38,7 +38,7 @@ class Home extends Component {
                 <img src={BannerPrincipal}/>
               </div>
               <div class="home__banner--text">
-                <h1>Facilitamos sua adequação com a LGPD ;)</h1>
+                <h1>Facilitamos sua adequação com a LGPD ;) opaaa</h1>
                 <h5>Configure e atenda as exigências da LGPD em minutos. E o melhor, inicie gratuitamente!</h5>
               </div>
             </div>
