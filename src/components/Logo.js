@@ -1,4 +1,4 @@
-import logo from '../images/logo.png';
+import logo from '../images/inpakta-logo-branco.png';
 const Logo = () => {
   return (
     <div className="header__logo">
