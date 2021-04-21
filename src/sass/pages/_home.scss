@@ -9,13 +9,13 @@
     background-position: 0 100%;
 
     &--wrapper {
-      padding: 40px 0;
+      padding: 180px 0 0;
       display: flex;
       flex-direction: column;
+      justify-content: center;
       height: 100%;
 
       @media screen and (min-width: 769px) {
-        padding: 100px 0;
         flex-direction: row;
         align-items: center;
         justify-content: space-between;
@@ -28,7 +28,6 @@
       img {
         width: 100%;
       }
-  
     }
 
     &--text {

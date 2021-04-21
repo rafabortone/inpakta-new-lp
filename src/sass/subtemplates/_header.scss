@@ -11,11 +11,13 @@
 
 .header {
   width: 100%;
-  height: auto;
-  background-color: transparent;
-  padding: 20px 24px;
+  height: 100px;
+  background:linear-gradient(20deg,#12C9FD 0%, #1A60E8 100%);
   font-weight: 500;
   position: fixed;
+  -webkit-box-shadow: 0px 10px 13px -7px #000000, 5px 5px 15px 5px rgba(0,0,0,0.5); 
+  box-shadow: 0px 5px 10px -7px rgba(0,0,0,0.5), 5px 5px 15px 5px rgba(0,0,0,0);
+  z-index: 10;
 
   
   &__logo {
@@ -26,134 +28,85 @@
   }
 
   &__menu {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: royalblue;
+    transform: translatex(100%);
+    @media screen and(min-width: 990px) { 
+      position: initial;
+      height: 100%;
+      background-color: transparent;
+      display: flex;
+      justify-content: space-between;
+      transform: initial;
+    }
 
+    &--active {
+      transform: translatex(10%);
+    }
+
+    &--close {
+      cursor: pointer;
+      display: flex;
+      background-color: red;
+      padding: 30px;
+      width: 20px;
+      @media screen and(min-width: 990px) { 
+        display: none;
+      }
+    }
+    &--open {
+      cursor: pointer;
+      display: flex;
+      background-color: red;
+      padding: 30px;
+      width: 20px;
+      @media screen and(min-width: 990px) { 
+        display: none;
+      }
+    }
     &--list {
       display: flex;
-      align-items: center;
+      flex-direction: column;
+      align-items: flex-start;
       justify-content: space-between;
       margin-top: 10px;
-      @media screen and(min-width: 446px) {
+      @media screen and(min-width: 990px) {
         margin-top: 0;
-        justify-content: unset;
+        width: auto;
+        justify-content: flex-start;
+        flex-direction: row;
+        align-items: center;
+        height: 100%;
       }
     }
 
     &--item {
       margin-left: 0;
-
-      @media screen and(min-width: 446px) {
-        margin-left: 32px;
+      display: flex;
+      align-items: center;
+      width: 100%;
+      @media screen and(min-width: 990px) { 
+        width: auto;
+        height: 100%;
       }
       a {
+        width: 100%;
+        padding: 20px;
         cursor: pointer;
-
+        color: $c-white;
         font: {
-          size: 14px;
-          weight: 500;
+          size: 16px;
+          weight: 300;
         }
 
         &:hover {
           text-decoration: underline;
         }
       }
-    }
-  }
-
-  &__search {
- 
-    width: 100%;
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    position: relative;
-    padding-top: 20px;
-    @media screen and (min-width: 769px) {
-      width: 50%;
-      padding-top: 0;
-    }
-      
-    &--input {
-      width: 100%;
-      border: {
-        color: $c-gray;
-        radius: 50px;
-        style: solid;
-        width: 1px;
-      }
-  
-      @media screen and (min-width: 769px) {
-        width: 200px;
-      }
-      font: {
-        size: 16px;
-      }
-      padding: 8px 16px;
-
-      &::-webkit-input-placeholder {
-        color: $c-pink-jussi;
-      }
-  
-      &:-moz-placeholder {
-        /* Firefox 18- */
-        color: $c-pink-jussi;
-      }
-  
-      &::-moz-placeholder {
-        /* Firefox 19+ */
-        color: $c-pink-jussi;
-      }
-  
-      &:-ms-input-placeholder {
-        color: $c-pink-jussi;
-      }
-  
-      &:focus{
-        width: 100%;
-      }
-    }
-
-    &--icon {
-  
-      position: absolute;
-      right: 12px;
-      @media screen and (min-width: 769px) {
-
-      }
-    }
-
-    &--list {
-      position: absolute;
-      left: 10px;
-      top: 110%;
-      display: none;
-      flex-wrap: wrap;
-      background-color: $c-white;
-      padding: 16px;
-      width: 100%;
-      z-index: 10;
-      box-shadow: -16px 23px 18px 2px rgba(0,0,0,0.3);
-      max-height:400px;
-      overflow: auto;
-    }
-    .active {
-      display: flex;
-    }
-    &--item {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      background-color: $c-white;
-      margin-right: 10px;
-      margin-bottom: 5px;
-      padding: 5px;
-      border: {
-        style: solid;
-        color: $c-gray;
-        width: 1px;
-        radius: 6px;
-      }
-      box-shadow: -3px 3px 9px 1px rgba(0,0,0,0.1);
     }
   }
 

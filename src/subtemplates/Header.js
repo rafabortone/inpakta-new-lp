@@ -5,9 +5,18 @@ import React, {Component} from 'react'
 
 class Header extends Component {
 
+  constructor(props) {
+    super(props);
+    this.handleClick = this.handleClick.bind(this);
+  }
+
+  handleClick() {
+    const menu = document.querySelector('.header__menu')
+    menu.classList.add('header__menu--active');
+  }
+
   componentDidMount() {
     const header = document.querySelector('.header')
-
     const headroom = new Headroom(header);
     headroom.init();
   }
@@ -18,6 +27,10 @@ class Header extends Component {
         <div className="container">
           <Logo/>
           <Menu/>
+          <div className="header__menu--open"
+            onClick={this.handleClick}
+          >
+          </div>  
         </div>
       </header>
     ) 
