@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import iconClose from '../icons/icon-arrow-right.svg'
 import AnchorLink from 'react-anchor-link-smooth-scroll'
 
 
@@ -19,14 +20,19 @@ class MenuNavBar extends Component {
         <div className="header__menu--close"
           onClick={this.closeMenu}
         >
+          <img src={iconClose} />
   
         </div>
         <ul className="header__menu--list">
           <li className="header__menu--item">
-            <AnchorLink href='#solucoes'> Nossas soluções</AnchorLink>
+            <AnchorLink href='#solucoes'
+              onClick={this.closeMenu}
+            > Nossas soluções</AnchorLink>
           </li>
           <li className="header__menu--item">
-            <AnchorLink href='#about'>Conheça a InPakta</AnchorLink>
+            <AnchorLink href='#about'
+              onClick={this.closeMenu}
+            >Conheça a InPakta</AnchorLink>
           </li>
         </ul>
       </nav>

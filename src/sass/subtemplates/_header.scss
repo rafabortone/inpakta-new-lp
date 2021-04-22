@@ -14,14 +14,15 @@
   height: 100px;
   background:linear-gradient(20deg,#12C9FD 0%, #1A60E8 100%);
   font-weight: 500;
-  position: fixed;
   -webkit-box-shadow: 0px 10px 13px -7px #000000, 5px 5px 15px 5px rgba(0,0,0,0.5); 
   box-shadow: 0px 5px 10px -7px rgba(0,0,0,0.5), 5px 5px 15px 5px rgba(0,0,0,0);
   z-index: 10;
-
-  
+  position: fixed;
+  .container {
+    display: flex;
+    justify-content: space-between;
+  }
   &__logo {
-
     img {
       max-width: 200px;
     }
@@ -35,6 +36,7 @@
     height: 100vh;
     background-color: royalblue;
     transform: translatex(100%);
+    transition: 0.5s;
     @media screen and(min-width: 990px) { 
       position: initial;
       height: 100%;
@@ -46,14 +48,17 @@
 
     &--active {
       transform: translatex(10%);
+      transition: 0.5s;
+      box-shadow: -37px -1px 18px 1px rgba(0,0,0,0.58);
+      -webkit-box-shadow: -37px -1px 18px 1px rgba(0,0,0,0.58);
+      -moz-box-shadow: -37px -1px 18px 1px rgba(0,0,0,0.58);
     }
 
     &--close {
       cursor: pointer;
       display: flex;
-      background-color: red;
       padding: 30px;
-      width: 20px;
+      width: 100%;
       @media screen and(min-width: 990px) { 
         display: none;
       }
@@ -61,7 +66,6 @@
     &--open {
       cursor: pointer;
       display: flex;
-      background-color: red;
       padding: 30px;
       width: 20px;
       @media screen and(min-width: 990px) { 
