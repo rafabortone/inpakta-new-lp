@@ -14,17 +14,26 @@
       flex-direction: column;
       justify-content: center;
       height: 100%;
+      margin-bottom: 20px;
 
       @media screen and (min-width: 769px) {
         flex-direction: row;
         align-items: center;
         justify-content: space-between;
+        margin-bottom: 30px;
       }
     }
 
     &--image {
       order: 2;
       width: 100%;
+      max-height: 530px;
+      border-radius: 5px;
+      overflow: hidden;
+      background-color: $c-white;
+      box-shadow: 10px 10px 16px 1px rgba(0,0,0,0.23);
+      -webkit-box-shadow: 10px 10px 16px 1px rgba(0,0,0,0.23);
+      -moz-box-shadow: 10px 10px 16px 1px rgba(0,0,0,0.23);
       img {
         width: 100%;
       }
@@ -44,6 +53,8 @@
         font: {
           size: 40px;
         };
+        line-height: 42px;
+        margin-bottom: 20px;
         @media screen and (min-width: 769px) { 
           font: {
             size: 62px;
@@ -58,6 +69,7 @@
           size: 16px;
           weight: 500;
         };
+        margin-bottom: 20px;
         @media screen and (min-width: 769px) { 
           font: {
             size: 24px;

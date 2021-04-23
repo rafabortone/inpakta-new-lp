@@ -1,6 +1,6 @@
 import { Component } from 'react';
 import NewsLetter from '../components/NewsLetter'
-import BannerPrincipal from '../images/montagem-telas.png'
+import BannerPrincipal from '../images/tela-banner.png'
 import Vitrine from '../subtemplates/Vitrine'
 import AnchorLink from 'react-anchor-link-smooth-scroll'
 class Home extends Component {
@@ -43,9 +43,7 @@ class Home extends Component {
               </div>
             </div>
             <div className="home__banner--content">
-              
               <AnchorLink href='#solucoes'>Começe agora gratuitamente!</AnchorLink>
-          
             </div>
           </div>
         </section>
