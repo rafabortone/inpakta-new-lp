@@ -8,8 +8,8 @@ const Vitrine = ({list}) => {
     dots: true,
     speed: 500,
     infinite:false,
-    slidesToShow: 4,
-    slidesToScroll: 2
+    slidesToShow: 3,
+    slidesToScroll: 1
   };
 
   return(
