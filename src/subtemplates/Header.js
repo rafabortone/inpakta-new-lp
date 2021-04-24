@@ -3,7 +3,7 @@ import Menu from '../components/MenuNavBar'
 import iconMenu from '../icons/icon-menu.svg'
 import Headroom from "headroom.js"
 import React, {Component} from 'react'
-
+import { motion } from "framer-motion"
 class Header extends Component {
 
   constructor(props) {
