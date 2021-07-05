@@ -1,3 +1,5 @@
+Landing page sendo desenvolvida com React.js, Sass e utilizando a biblioteca Framer Motion para animações.
+
 
 ### `npm i`
 
