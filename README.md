@@ -1,4 +1,5 @@
-Landing page sendo desenvolvida com React.js, Sass e utilizando a biblioteca Framer Motion para animações.
+Landing page sendo desenvolvida com React.js, Sass e utilizando a biblioteca Framer Motion para animações.\
+
 Acesse: https://rafabortone.github.io/inpakta-new-lp/
 
 ![Alt text](inpakta-lp.gif)
